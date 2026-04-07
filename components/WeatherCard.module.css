@@ -1,0 +1,136 @@
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(20px);
+  animation: slideUp 0.5s ease;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.locationInfo {
+  flex: 1;
+}
+
+.cityName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.condition {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: capitalize;
+}
+
+.tempSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weatherIcon {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.tempDisplay {
+  display: flex;
+  align-items: flex-start;
+}
+
+.temperature {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.unit {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+}
+
+.feelsLike {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 24px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 14px 10px;
+  transition: background 0.2s ease;
+}
+
+.statItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.statIcon {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .topSection {
+    flex-direction: column-reverse;
+  }
+
+  .cityName {
+    font-size: 1.5rem;
+  }
+
+  .temperature {
+    font-size: 3.5rem;
+  }
+
+  .weatherIcon {
+    font-size: 3rem;
+  }
+}
